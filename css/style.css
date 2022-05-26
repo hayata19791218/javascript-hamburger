@@ -1,0 +1,189 @@
+/* ここからリセットcss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+p,.nav{
+    margin:0;
+}
+/* リセットcssはここまで */
+
+
+.header{
+  background-color:#f7f7f7;
+  position:fixed;
+  top:0;
+  width: 100%;
+}
+.header__inner {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.header__title a{
+  font-size: 30px;
+  color:#000;
+}
+@media screen and (max-width: 767px) {
+  .header__title a{
+    font-size: 20px;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  .header__nav {
+    position: fixed;
+    right:-100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: skyblue;
+    transition: ease .4s;
+  }
+}
+.nav__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width:767px) {
+  .nav__items {
+    flex-direction:column;
+    justify-content:flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.nav__items__item a {
+  color: black;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  .nav__items__item a {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:767px){
+  .nav__items__item{
+    margin-top: 50px;
+  }
+}
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 2;
+  display: none;
+}
+@media screen and (max-width:767px) {
+  .header__hamburger {
+    display: block;
+  }
+}
+.header__hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+.header__hamburger span:nth-child(1) {
+  top: 0;
+}
+.header__hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+.header__hamburger span:nth-child(3) {
+  top: 0;
+}
+.header__nav.active {
+  right:0;
+}
+.header__hamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+.header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+} 
+body{
+  padding-top: 100px;
+}
